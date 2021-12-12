@@ -44,7 +44,7 @@ L:
 					defer weighted.Release(1)
 					defer wg.Done()
 					var (
-						gctx = context.Background()
+						gctx = ctx
 						gErr error
 					)
 					if preparer, ok := executor.(instabench.Preparer); ok {
